@@ -31,14 +31,14 @@ public class RemoteService {
 		@GetMapping("/service")
 		public String service(String req) throws Exception {
 			TimeUnit.SECONDS.sleep(2);
-			log.info(req);
+			log.info("call service {}", req);
 //			throw new RuntimeException();
 			return req + "/service1";
 		}
 
 		@GetMapping("/service2")
 		public String service2(String req) throws Exception {
-			log.info(req);
+			log.info("call service2 {}", req);
 			TimeUnit.SECONDS.sleep(2);
 			return req + "/service2";
 		}
